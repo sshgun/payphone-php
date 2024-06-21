@@ -89,12 +89,12 @@ class PayButtonBox
         }";
     }
 
-    public function jsAsset(): string
+    public static function jsAsset(): string
     {
         return 'https://cdn.payphonetodoesposible.com/box/v1.1/payphone-payment-box.js';
     }
 
-    public function cssAsset(): string
+    public static function cssAsset(): string
     {
         return 'https://cdn.payphonetodoesposible.com/box/v1.1/payphone-payment-box.css';
     }
