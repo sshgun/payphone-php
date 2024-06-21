@@ -13,7 +13,7 @@ or affiliates. The official PayPhone website can be found at https://paypohne.ap
 
  The payphone payment button box is a HTML form rendered by the official payphone
 API. This lib only implements a simple interface to use the code from PHP. The
-complete docs can be found (here)[https://docs.payphone.app/en/doc/cajita-de-pagos-payphone/]
+complete docs can be found [here](https://docs.payphone.app/en/doc/cajita-de-pagos-payphone/)
 
 With this library first to all you need to render the payphone box. I going to
 use plain PHP for this example.
