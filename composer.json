@@ -1,0 +1,32 @@
+{
+    "version": "1.0.0",
+    "name": "sshgun/payphone-php",
+    "description": "a simple sdk to use the payphone payments",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "shogun",
+            "email": "g3devmain@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "sshgun\\PayphonePHP\\": "src/"
+        }
+    },
+
+    "config": {
+        "platform": {
+            "php": "^7.4"
+        }
+    },
+
+    "minimum-stability": "stable",
+    "require": {
+        "guzzlehttp/guzzle": "^7.8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.2"
+    }
+}
