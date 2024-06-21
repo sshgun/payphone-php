@@ -16,12 +16,6 @@
         }
     },
 
-    "config": {
-        "platform": {
-            "php": "^7.4"
-        }
-    },
-
     "minimum-stability": "stable",
     "require": {
         "guzzlehttp/guzzle": "^7.8"
