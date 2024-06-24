@@ -13,7 +13,7 @@ class OperationErr
     private string $_error;
     private ?Exception $_e;
 
-    public function __construct(int $code, string $error, ?Exception $e = null)
+    public function __construct(string $error, int $code = 0, ?Exception $e = null)
     {
         $this->_code = $code;
         $this->_error = $error;

@@ -93,3 +93,44 @@ var_dump($data);
 
 ```
 
+## Payment link
+
+Payphone offer a redirection model in which we can create a link that the user
+must follow to make the payment. this behavior use redirections from your site
+to the payphone domain and the the payphone server redirect the user back using
+a response o cancel url.
+
+To create the payment using this lib you only need to create a arguments object
+and redirect the users to the url returned by the prepare endpoint.
+
+```php
+<?php
+
+const PAYPHONE_TOKEN="YOUR app private token";
+
+$args = new PreparedPaymentArgs;
+$args->amount = 100; # 1$
+$args->amountWithoutTax = 100; 
+$args->responseUrl = "https://your-comback-url";
+$args->cancellationUrl = "https://your-cancel-comback-url";
+# the clientTransactionId is your internal identificator, can be the id of your
+# orders or transaction table.
+$args->clientTransactionId = "your-internal-id";
+
+$client = new PayphoneClient(PAYPHONE_TOKEN); 
+
+$data = $client->postCreatePaymentLinks($args);
+if(is_null($data)){
+    # an error ocurred. you can get the information on 
+    $err = $client->getError();
+    # show some information to the user.
+    die();
+}
+# the operation was ok son wee need to redirect the user to the returned url
+# here we only show the links.
+?>
+
+<a href="<?= $data->payWithCard =>">Pagar con Tarjeta</a>
+<a href="<?= $data->payWithPayPhone =>">Pagar con Payphone</a>
+
+```

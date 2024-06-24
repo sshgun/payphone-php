@@ -1,5 +1,5 @@
 {
-    "version": "0.1.1",
+    "version": "0.2.1",
     "name": "sshgun/payphone-php",
     "description": "a simple sdk to use the payphone payments",
     "license": "MIT",
