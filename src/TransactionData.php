@@ -29,6 +29,8 @@ class TransactionData
     private ?string $recap;
     private string $reference;
 
+    const STATUS_APPROVED = 'approved';
+
     public function __construct(array $data = [])
     {
 
@@ -56,6 +58,11 @@ class TransactionData
         $this->transactionType      = (string) ($data['transactionType'] ?? '');
         $this->recap                = isset($data['recap']) ? (string) $data['recap'] : null;
         $this->reference            = (string) ($data['reference'] ?? '');
+    }
+
+    public function wasApproved(): bool
+    {
+        return $this->transactionStatus === static::STATUS_APPROVED;
     }
 
     public function getCardType(): string
