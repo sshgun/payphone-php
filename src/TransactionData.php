@@ -29,7 +29,7 @@ class TransactionData
     private ?string $recap;
     private string $reference;
 
-    const STATUS_APPROVED = 'approved';
+    const STATUS_APPROVED = 'Approved';
 
     public function __construct(array $data = [])
     {
