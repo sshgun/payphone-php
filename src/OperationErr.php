@@ -30,7 +30,7 @@ class OperationErr
         return $this->_error;
     }
 
-    public function getException(): Exception
+    public function getException(): ?Exception
     {
         return $this->_e;
     }
